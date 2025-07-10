@@ -5,13 +5,13 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 
-const routes: Routes = [
+const authRoutes: Routes = [
   {
     path: '',
     component:LoginComponent
   },
   {
-    path: '/signUp',
+    path: 'signUp',
     component:SignUpComponent
   }
 ]
@@ -19,10 +19,8 @@ const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forChild(authRoutes),
   ],
-  exports: [
-    RouterModule
-  ]
+
 })
 export class AuthModule { }

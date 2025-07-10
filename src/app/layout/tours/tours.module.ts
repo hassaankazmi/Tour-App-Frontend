@@ -7,17 +7,17 @@ import { BookingComponent } from './booking/booking.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 
 
-const routes: Routes = [
+const tourRoutes: Routes = [
   {
     path: '',
     component:ListingComponent
   },
   {
-    path: '/booking',
+    path: 'booking',
     component:BookingComponent 
   },
   {
-    path: '/review',
+    path: 'review',
     component:ReviewsComponent
   }
 ]
@@ -26,10 +26,8 @@ const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forChild(tourRoutes),
   ],
-  exports: [
-    RouterModule
-  ]
+
 })
 export class ToursModule { }

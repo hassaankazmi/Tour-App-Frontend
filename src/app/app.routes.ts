@@ -6,13 +6,13 @@ export const routes: Routes = [
         loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule)
     },
     {
-        path: '/tour',
-        loadChildren: () => import('./tours/tours.module').then(module => module.ToursModule)
+        path: 'tour',
+        loadChildren: () => import('./layout/tours/tours.module').then(module => module.ToursModule)
     },
 
-    {
-        path: '**',
-        redirectTo:'/tour'
-    }
+    // {
+    //     path: '**',
+    //     redirectTo:'tour'
+    // }
     
 ];

@@ -1,1 +1,83 @@
-<p>sign-up works!</p>
+<main class="main">
+    <div class="singup-form">
+      <h2 class="heading-secondary ma-bt-lg">Create your account!</h2>
+      
+      <form class="form form--signup" (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        <!-- Name -->
+        <div class="form__group">
+          <label class="form__label" for="name">Your name</label>
+          <input
+            id="name"
+            name="name"
+            class="form__input"
+            type="text"
+            placeholder=""
+            required
+            [(ngModel)]="user.name"
+            #name="ngModel"
+          />
+          <div *ngIf="name.invalid && name.touched" class="form__error">Name is required</div>
+        </div>
+  
+        <!-- Email -->
+        <div class="form__group">
+          <label class="form__label" for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            class="form__input"
+            type="email"
+            placeholder="you@example.com"
+            required
+            [(ngModel)]="user.email"
+            #email="ngModel"
+          />
+          <div *ngIf="email.invalid && email.touched" class="form__error">Valid email is required</div>
+        </div>
+  
+        <!-- Password -->
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            class="form__input"
+            type="password"
+            placeholder="••••••••"
+            required
+            minlength="8"
+            [(ngModel)]="user.password"
+            #password="ngModel"
+          />
+          <div *ngIf="password.invalid && password.touched" class="form__error">
+            Password must be at least 8 characters
+          </div>
+        </div>
+  
+        <!-- Confirm Password -->
+        <div class="form__group ma-bt-md">
+          <label class="form__label" for="passwordConfirm">Confirm password</label>
+          <input
+            id="passwordConfirm"
+            name="passwordConfirm"
+            class="form__input"
+            type="password"
+            placeholder="••••••••"
+            required
+            minlength="8"
+            [(ngModel)]="user.passwordConfirm"
+            #passwordConfirm="ngModel"
+          />
+          <div *ngIf="passwordConfirm.invalid && passwordConfirm.touched" class="form__error">
+            Confirmation is required
+          </div>
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="form__group">
+          <button class="btn btn--green" type="submit" [disabled]="signupForm.invalid">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
