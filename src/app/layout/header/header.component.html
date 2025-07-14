@@ -1,0 +1,42 @@
+<header class="header">
+    <!-- Logo -->
+    <!-- Navigation -->
+    <nav class="nav nav--user">
+        <!-- If user is logged in -->
+        <div class="header__logo-box">
+          <img
+            src="../../../assets/img/logo-white.png"
+            alt="Natours logo"
+            class="header__logo"
+          />
+        </div>
+      
+      <!-- <ng-container *ngIf="user; else guestNav">
+        <a class="nav__el nav__el--logout" (click)="logout()">Log out</a>
+        <a class="nav__el" routerLink="/me">
+          <img
+            class="nav__user-img"
+            [src]="'/img/users/' + user.photo"
+            [alt]="'Photo of ' + user.name"
+          />
+          <span>{{ user.name.split(' ')[0] }}</span>
+        </a>
+      </ng-container> -->
+  
+      <!-- If user is not logged in -->
+      <!-- <ng-template #guestNav>
+        <a class="nav__el" routerLink="/login">Log in</a>
+        <a class="nav__el nav__el--cta" routerLink="/signup">Sign up</a>
+      </ng-template> -->
+    </nav>
+  
+    <!-- Text Content -->
+    <div class="header__text-box">
+      <h1 class="heading-primary">
+        <span class="heading-primary--main">Outdoors</span>
+        <span class="heading-primary--sub">is where life happens</span>
+      </h1>
+      <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+    </div>
+  </header>
+  

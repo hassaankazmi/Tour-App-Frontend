@@ -5,11 +5,12 @@ import { Router } from 'express';
 import { ListingComponent } from './listing/listing.component';
 import { BookingComponent } from './booking/booking.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ExcitingToursComponent } from '../exciting-tours/exciting-tours.component';
 
 
 const tourRoutes: Routes = [
   {
-    path: '',
+    path: 'list',
     component:ListingComponent
   },
   {
@@ -19,6 +20,10 @@ const tourRoutes: Routes = [
   {
     path: 'review',
     component:ReviewsComponent
+  },
+  {
+    path: 'about',
+    component:ExcitingToursComponent
   }
 ]
 
