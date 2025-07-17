@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { AuthServiceService } from '../../auth/auth-service.service';
 
 @Component({
   selector: 'app-navigation',
@@ -10,7 +11,10 @@ import { Router, RouterModule } from '@angular/router';
 export class NavigationComponent {
 
   private readonly route = inject(Router);
+  private readonly authenticationService = inject(AuthServiceService);
+
   logout() {
-    this.route.navigateByUrl('/')
+    this.authenticationService.logout(); 
+    this.route.navigate(['/']);
   }
 }

@@ -33,7 +33,7 @@ export class LoginComponent {
       }
     })
 
-    this.routes.navigateByUrl('/layout/list');
+    // this.routes.navigateByUrl('/layout/list');
   }
 
   onSubmit() {
