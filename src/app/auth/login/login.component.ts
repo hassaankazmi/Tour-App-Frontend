@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { AuthServiceService } from '../auth-service.service';
+import { AuthServiceService } from '../../services/auth-service.service';
 import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',

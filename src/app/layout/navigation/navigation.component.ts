@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { AuthServiceService } from '../../auth/auth-service.service';
+import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
   selector: 'app-navigation',

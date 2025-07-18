@@ -46,7 +46,11 @@ export class AuthServiceService {
   getuser(){
     
     const url = `${environment.apiBaseUrl}userData/6878f1920a27b002fa19ae13`;
+    const token = localStorage.getItem('token'); 
 
-   return this.http.get<any>(url);
+    return this.http.get<any>(url, {
+      headers: { Authorization: `Bearer ${token}` }
+    }
+   );
   }
 }

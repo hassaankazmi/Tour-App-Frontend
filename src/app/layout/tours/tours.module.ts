@@ -6,6 +6,7 @@ import { ListingComponent } from './listing/listing.component';
 import { BookingComponent } from './booking/booking.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ExcitingToursComponent } from '../exciting-tours/exciting-tours.component';
+import { TourListComponent } from './tour-list/tour-list.component';
 
 
 const tourRoutes: Routes = [
@@ -24,6 +25,10 @@ const tourRoutes: Routes = [
   {
     path: 'about',
     component:ExcitingToursComponent
+  },
+  {
+    path: 'tourList',
+    component:TourListComponent
   }
 ]
 
